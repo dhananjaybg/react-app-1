@@ -1,0 +1,16 @@
+.Haiku {
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: larger;
+  font-style: italic;
+  background-blend-mode: luminosity;
+  
+  background-color: lavenderblush;
+
+}
+.HaikuCard {
+
+  background-image: './old-paper.jpg';
+
+}

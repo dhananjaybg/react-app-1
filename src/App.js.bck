@@ -1,0 +1,105 @@
+import React , { useState } from 'react';
+//import logo from './logo.svg';
+import mylogo from './mylogo.jpg';
+import './App.css';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
+
+function App() {
+
+  const [count, setCount] = useState(0);
+  const  poem = "raw poem text here placeholder";
+  
+  function pophaiku()
+   {
+    
+
+     var oneS = ["true", "dark", "cold", "young", "great"];
+        var twoS = ["visions", "distance", "conscience", "process", "chaos"];
+        var threeS = ["ravishing", "amazing", "fanciful", "delightful", "delicate"];
+        var fourS = ["superstitious", "continuous", "incapable", "contradicting", "overwhelming"];
+        var fiveS = ["undeniable", "beautiful", "irreplaceable", "unbelievable", "irrevocable"];
+        
+        var num1=(Math.floor(Math.random()*10) % oneS.length);
+        var num2a=(Math.floor(Math.random()*10) % twoS.length);
+        var num2b=(Math.floor(Math.random()*10) % twoS.length);
+
+        var num3=(Math.floor(Math.random()*10) % threeS.length);
+        var num4=(Math.floor(Math.random()*10) % fourS.length);
+        var num5=(Math.floor(Math.random()*10) % fiveS.length);
+
+       // personalize = "%#$62436"
+       // personalize = document.getElementById("person").value;
+       // alert(personalize )
+      //var haiku =  "<p>"+  threeS[num3] + " " + twoS[num2a] + " </p><p> " + fourS[num4] + " " + oneS[num1] + " </p><p> " + twoS[num2b] + " " + personalize + " " + fiveS[num5] + " </p>";
+      var haiku =  "<p>"+  threeS[num3] + " " + twoS[num2a] + " </p><p> " + fourS[num4] + " " + oneS[num1] + " </p><p> " + twoS[num2b]  + " " + fiveS[num5] + " </p>";
+
+
+        alert(haiku);
+
+   }
+
+  return (
+    
+    <div className="App-header">
+
+     
+      <div id="top-div">
+        <header>
+          <img src={mylogo} className="App-logo" alt="logo" />
+          <p>
+            Haiku Generator ...
+          </p>
+        </header>
+
+        <input type="text" name="myword" id=""/>    
+        <input type="button" value="btn-generate" onClick={() => setCount(count + 1)} />
+        <input type="button" value="pop-haiku" onClick={pophaiku} />
+        <Button onClick={pophaiku} variant="primary">Warning Pop a Haiku </Button>
+      </div>
+  
+      <div id="my-hiaku">
+       
+
+  <Card style={{ width: '18rem' }}>
+  <Card.Img variant="top" src="holder.js/100px180" />
+  <Card.Body>
+    <Card.Title>Card Title</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
+    <Button variant="primary">Go somewhere</Button>
+  </Card.Body>
+</Card>
+
+
+     </div> 
+      <div id="hiaku-others">
+        <div>
+          <p>you  a few seconds ago</p>
+          <p>focussed deep </p>
+          <p>uncommitted</p>
+        </div>
+        <Card>
+
+        </Card>
+        <hr />
+        <div>
+          <p>Clone object poly</p>
+          <p>polymorphic focussed deep </p>
+          <p>serialxed </p>
+        </div>
+        <div>
+          <p>you  a few seconds ago</p>
+          <p>focussed deep </p>
+          <p>uncommitted</p>
+        </div>
+      </div>
+      
+    </div>
+  );
+}
+
+export default App;
